@@ -1,0 +1,21 @@
+when we use the same dependency injection and inject same instance of service class to parent component and it's child components 
+then dependency injection in child component overrides dependency injection of its parent class .
+
+child class provider overrides parent parent class provider.
+
+Instead of providing provider of class in each  child component to access the same instance of a service class we can add provider 
+in component class of  a parent component  and use it in each child component.
+
+Providing dependency injection(provider) in header, module and parent component and using them in child component class is called hierarchical 
+dependency injection.
+
+Injecting instance of one angular service class into anonther angular service class.
+using @Injectable.
+
+we use  provider  in angular iun component class ,module etc in  application to specify adn to provide a type of instance that
+need to be injected 
+provider has two components provide and use class {provide:token-name,useclass:serviceclassName}
+token name can be used to inject dependency in all the components whereever it's required.
+for that we need to use @inject(token-name) in constructor();
+
+to provide provider name directly in angular service class we can provide it by using providerIn  in @Injectable in service class.
